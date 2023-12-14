@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const customers = []
+  //      let data = prompt ("Masukkan data Anda!")
+        function addCustomer(name, accountNumber){
+            let newCustomer = {
+                name: name,
+                accountNumber: accountNumber,
+                balance: 0,
+                transactionHistory:[]
+            };
+            customers.push(newCustomer);
+            document.getElementById(`Customer ${name} with account number ${accountNumber} has been added.`);
+        }
+    
+        function deposit(accountNumber, amount){
+            const customer = findCustomer(accountNumber);
+            if(customer){
+                customer.balance += amount;
+                customer.transactionHistory.push(`Deposit: +${amount}`);
+                document.getElementById(`Deposited ${amount} to account ${accountNumber}.`);
+            } else {
+                document.getElementById(`Customer with account number ${accountNumber} not found.`);
+            }
+            //cari pelangan dengan nomor rekening yang sesuai
+            //lakukan depost dan catat transaksi
+        }
+    
+        function withdraw(accountNumber, amount){
+            //cari pelangan dengan nomor rekening yang sesuai
+            //lakukan withdrawal dan catat transaksi
+        }
+    
+        function checkBalance (accountNumber){
+            //cari pelangan dengan nomor rekening yang sesuai
+            // tampilkan saldo
+        }
+        
+        function viewTransactionHistory(accountNumber){
+            //cari pelangan dengan nomor rekening yang sesuai
+            //tampilkan historyy transaksi
+        }
+    
+        function transactionhandler(type, accountNumber, amount){
+            switch (type){
+                case 'deposit':
+                    deposit(accountNumber, amount);
+                    break;
+                case 'withdraw':
+                    withdraw(accountNumber, amount);
+                    break;
+                default:
+                    console.log("Invalid Transaction type")
+            }
+        }
+</body>
+</html>

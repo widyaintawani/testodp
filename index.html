@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Salary Calculator</title>
+    <style>
+h2 {
+ text-align: center;
+  color: #333;
+}
+
+form {
+  max-width: 400px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  align-items: center;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#result {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+}
+  /* color: purple;
+  font-family: verdana;
+  font-size: 100%;
+  text-align: center;
+}
+p {
+  color: purple;
+  font-family: arial;
+  font-size: 100%;
+}
+
+form {
+  color: purple;
+  font-family: arial;
+  font-size: 100%;
+}
+
+body{
+    background-color: rgb(255, 245, 245)
+}
+
+div {
+  color: purple;
+  font-family: arial;
+  font-size: 100%;    
+} */
+    </style>
+</head>
+<body>
+    
+        <!-- <button onclick="sortAlphabet()">Sort Alphabet</button>
+        <button onclick="sortNumeric()">Sort Numeric</button>
+
+        <h1 id = "demo"></h1>
+        <h1 id = "demo2"></h1>
+    </div>
+
+    <script>
+        const points = [100, 1, 2, 7, 5, 90]
+        const huruf = ["ayam", "makan", "ikan", "lele"]
+        document.getElementById("demo").innerHTML = points
+        document.getElementById("demo2").innerHTML = huruf
+
+        function sortAlphabet(){
+            huruf.sort(() => Math.random(huruf.length) - 0,5)
+            document.getElementById("demo2").innerHTML = huruf
+        }
+
+        function sortNumeric(){
+            // points.sort((a, b) => a - b)
+            points.sort(() => Math.random() - 0.5)
+            document.getElementById("demo").innerHTML = points
+        }     
+    </script> -->
+    
+    <!-- <fieldset>
+    <h2>Savings Calculator</h2>
+
+    <form id="savingsForm">
+      <label for="initialSavings">Jumlah Tabungan Awal:</label>
+      <input type="number" id="initialSavings" required>
+      <br/>
+      <br/>
+      <label for="annualInterestRate">Bunga per tahun (%):</label>
+      <input type="number" id="annualInterestRate" step="0.01" required>
+      <br/>
+      <br/>
+      <label for="savingPeriod">Periode Tabungan (bulan):</label>
+      <input type="number" id="savingPeriod" required>
+      <br/>
+      <br/>
+      <button type="button" onclick="calculateSavings()">Kalkulasi</button>
+    </form>
+  
+    <div id="result"></div>
+  
+    <script>
+      function calculateSavings() {
+        // Mendapatkan nilai dari input
+        var initialSavings = parseFloat(document.getElementById("initialSavings").value);
+        var annualInterestRate = parseFloat(document.getElementById("annualInterestRate").value);
+        var savingPeriod = parseInt(document.getElementById("savingPeriod").value);
+  
+        // Menghitung bunga
+        var interest = (initialSavings * annualInterestRate * savingPeriod) / 1200;
+  
+        // Menghitung total tabungan akhir
+        var totalSavings = initialSavings + interest;
+        // Menampilkan hasil
+        document.getElementById("result").innerHTML = "Total Tabungan Akhir " + savingPeriod + " bulan : Rp " + totalSavings.toFixed(2);
+      }
+    </script>
+    </fieldset> -->
+
+<fieldset>
+<h2>Employee Salary Calculator</h2>
+<p>Silahkan cek gaji anda bulan ini!</p>
+<form id="salaryForm">
+  <label for="basicSalary">Gaji Pokok:</label>
+  <input type="number" id="basicSalary" required>
+  <br/>
+  <br/>
+  <label for="bonus"> Bonus:</label>
+  <input type="number" id="bonus">
+  <br/>
+  <br/>
+  <label for="deductions">Jumlah Potongan:</label>
+  <input type="number" id="deductions">
+  <br/>
+  <br/>
+  <button type="button" onclick="calculateNetSalary()">Kalkulasi</button>
+</form>
+
+<div id="result"></div>
+
+<script>
+  function calculateNetSalary() {
+    // Mendapatkan nilai dari input
+    var basicSalary = parseFloat(document.getElementById("basicSalary").value);
+    var bonus = parseFloat(document.getElementById("bonus").value);
+    var deductions = parseFloat(document.getElementById("deductions").value);
+
+    // Menghitung gaji bersih
+    var netSalary = (basicSalary + bonus - deductions);
+
+    // Menampilkan hasil
+    document.getElementById("result").innerHTML = "Total Gaji Bersih: Rp. " + netSalary.toFixed(2);
+  }
+</script>
+</fieldset>
+    
+</body> 
+</html>
